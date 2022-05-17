@@ -1,0 +1,111 @@
+.register{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/img/registerBg.jpg");
+    background-size: cover;
+    color: white;
+}
+
+
+.registerTitle{
+    font-size: 60px;
+    align-self: center;
+}
+
+
+.registerForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: 'Lora', serif;
+}
+
+.registerForm > label{
+    margin: 10px 0;
+
+}
+
+.registerForm > input{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+label{
+    display: flex;
+}
+
+#cnfPassword{
+    margin: 0px 0;
+}
+
+#password{
+    margin: 0 0 12px 0;
+}
+
+.passwordMsg{
+    color: tomato;
+    font-size: 15px;
+    /* position: absolute; */
+    font-family: 'Valrela Round', sans-serif;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.registerButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: lightcoral;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    transition-duration: 0.3s;
+    text-align: center;
+    /* font-weight: bold; */
+}
+
+.disabledRegisterButton{
+    margin-top: 20px;
+    background-color: rgb(153, 153, 153);
+    border: none;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    transition-duration: 0.3s;
+    text-align: center;
+    user-select: none;
+    font-family: 'Vareval Round', sans-serif;
+}
+
+.registerButton:hover{
+    background-color: rgb(235, 116, 116);
+}
+
+.registerLoginButton{
+    cursor: pointer;
+    background-color: lightgray;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    width: 50%;
+    margin: 40px auto;
+    transition-duration: 0.3s;
+
+}
+
+.registerLoginButton:hover{
+    background-color: rgb(192, 192, 192);
+}
