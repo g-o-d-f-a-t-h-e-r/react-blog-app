@@ -6,6 +6,20 @@
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/img/registerBg.jpg");
     background-size: cover;
     color: white;
+    
+}
+
+
+.registerError{
+    font-weight: 600;
+    font-family: 'Vareval Round', sans-serif;
+    text-align: center;
+    color: red;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    text-align: center;
+    width: 100%;
 }
 
 
@@ -16,13 +30,15 @@
 
 
 .registerForm{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 0 auto;
+    margin: 10px auto;
     font-size: 18px;
     font-family: 'Lora', serif;
+    position: relative;
+    /* background-color: aquamarine; */
+    padding: 20px;
 }
 
 .registerForm > label{
@@ -101,7 +117,7 @@ label{
     padding: 10px;
     font-size: 18px;
     width: 50%;
-    margin: 40px auto;
+    margin: 20px auto;
     transition-duration: 0.3s;
 
 }

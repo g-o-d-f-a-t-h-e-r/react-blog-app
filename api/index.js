@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 const multer = require("multer");  
 var cors = require('cors')
+const path = require("path")
 
 const dotenv = require("dotenv");
 dotenv.config();
+
 // ROUTES
 const authRoute = require("./routes/auth"); 
 const userRoute = require("./routes/users"); 
@@ -40,6 +42,7 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
 
 // ENDPOINTS
 app.use(express.json());
+app.use("/images", express.static(path.join(__dirname, "/images")))
 app.use(cors());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);

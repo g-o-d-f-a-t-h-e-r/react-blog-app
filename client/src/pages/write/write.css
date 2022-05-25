@@ -38,9 +38,22 @@
 
 .writeInput{
     font-size: 30px;
+    outline: none;
     border: none;
-    padding: 20px;
-    width: 70vw;
+    padding: 10px;
+    margin: 20px;
+    width: 80.3%;
+    border-bottom: 1px dotted grey;
+}
+
+.writeCat{
+    font-size: 14px;
+    border: none;
+    outline: none;
+    margin-left: 195px;
+    padding: 10px;
+    width: 71.4%;
+    border-bottom: 1px dotted grey;
 }
 
 
@@ -49,8 +62,14 @@
 }
 
 .writeText{
+    padding: 10px;
+    margin: 20px;
+    width: 80%;
+    margin-left: 45px;
     font-size: 20px;
-    height: 100vh;
+    height: 50vh;
+    border: 1px dotted grey;
+    outline: none;
 }
 
 .writeSubmit{

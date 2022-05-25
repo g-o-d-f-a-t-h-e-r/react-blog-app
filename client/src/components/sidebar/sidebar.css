@@ -23,6 +23,11 @@
     border-radius: 50%;
 }
 
+.sidebarItem > h2{
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
 .sidebarItem > p{
     padding: 30px;
     text-align: center;
@@ -65,16 +70,26 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 
 .sidebarListItem{
-    width: 50%;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
     cursor: pointer;
     text-align: center;
-    /* background-color: lemonchiffon; */
+    background-color: rgb(255, 226, 226);
     transition-duration: 0.2s;
     font-weight: 500;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
 }
 
 .sidebarListItem:hover{

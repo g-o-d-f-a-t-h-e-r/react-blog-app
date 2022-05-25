@@ -1,12 +1,23 @@
 const router = require("express").Router();
 const User = require("../models/User");
 const Post = require('../models/Post')
+const Category = require('../models/Category')
 
 
 // Create New Post
 router.post('/', async(req, res) => {
 
-    const newPost = new Post(req.body);
+    let categories = req.body.cat.split(' ')
+
+    
+
+    const newPost = new Post({
+        title : req.body.title,
+        desc : req.body.desc,
+        photo : req.body.photo? req.body.photo : "",
+        username : req.body.username,
+        categories,
+    });
 
     try{
 
@@ -16,6 +27,7 @@ router.post('/', async(req, res) => {
     }catch(err){
         res.status(500).json(err);
     }
+    
 
 })
 
@@ -28,9 +40,15 @@ router.put('/:id', async(req, res) => {
         if(post.username === req.body.username){
             
             try {
-
+                let categories = req.body.cat.split(' ')
                 const updatedPost = await Post.findByIdAndUpdate(req.params.id, {
-                    $set:req.body
+                    $set:{
+                        title : req.body.title,
+                        desc : req.body.desc,
+                        photo : req.body.photo? req.body.photo : "",
+                        username : req.body.username,
+                        categories,
+                    }
                 }, { new : true })
                 res.status(200).json(updatedPost)
 
@@ -39,7 +57,7 @@ router.put('/:id', async(req, res) => {
             }
 
         }else{
-            res.status(401).json("You can only update only your post!");
+            res.status(401).json("You can only update your post!");
         }
         
 

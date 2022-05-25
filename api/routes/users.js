@@ -16,6 +16,8 @@ router.put('/:id', async(req, res) => {
 
         }
 
+        const existingUser = await User.findById(req.params.id);
+
         try {
 
             const updatedUser = await User.findByIdAndUpdate(req.params.id, {
@@ -26,6 +28,29 @@ router.put('/:id', async(req, res) => {
         } catch (error) {
             res.status(500).json(error);
         }
+
+    
+
+        if(req.body.username){
+
+            try {
+                await Post.updateMany(
+                    { username : existingUser.username },
+                    {
+                        $set:{
+                            username : req.body.username
+                        }
+                    }
+                )
+            } catch (error) {
+                res.status(500).json(error);
+            }
+
+        }
+
+
+        
+
     }else{
         res.status(401).json("You can update only your account!");
     }

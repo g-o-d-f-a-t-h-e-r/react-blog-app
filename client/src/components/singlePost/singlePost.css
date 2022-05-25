@@ -14,12 +14,63 @@
     object-fit: cover;
 }
 
+.box{
+    width: 100%;
+    height: 350px;
+    border: 2px dashed rgb(155, 155, 155);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.box > p{
+    font-family: 'Vareval Round', sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    color: #444;
+}
+
+.box > span{
+    font-family: 'Vareval Round', sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    color: tomato;
+}
+
+.updateImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 .singlePostTitle{
     /* text-align: center; */
     margin: 10px;
     font-family: 'Lora', serif;
     font-size: 35px;
-    margin: 20px 0 0 0;
+    margin: 20px 0 10px 0;
+    padding: 5px 0;
+}
+
+.singlePostTitleInput{
+    /* margin: 10px; */
+    width: 99%;
+    font-family: 'Lora', serif;
+    font-size: 35px;
+    margin: 20px 0 10px 0;  
+    font-weight: 600; 
+    border: 2px dashed rgb(155, 155, 155);
+    outline: none;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.singlePostTitleInput:focus{
+    border-color: black;
 }
 
 .postCats{
@@ -32,17 +83,71 @@
 }
 
 .singlePostIcon{
-    margin-left: 10px;
+    margin-left: 15px;
     cursor: pointer;
 }
 
 .singlePostIcon:first-child{
     color: teal;
+    transition-duration: 0.2s;
+}
+
+.singlePostIcon:first-child:hover{
+    color: rgb(0, 92, 92);
+    transform: scale(1.1);
 }
 
 .singlePostIcon:last-child{
     color: tomato;
+    transition-duration: 0.2s;
 }
+
+.singlePostIcon:last-child:hover{
+    color: red;
+    transform: scale(1.1);
+}
+
+.singlePostCats{
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #b39656;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.singlePostEditCats{
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #b39656;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: antiquewhite; */
+}
+
+.cat{
+    font-weight: bold;
+    cursor: pointer;
+    color: #b39656;
+    border: none;
+    outline: none;
+
+}
+
+.catEdit{
+    font-weight: bold;
+    color: #b39656;
+    outline: none;
+    padding: 6px;
+    font-size: 16px;
+    margin-left: 10px;
+    border: 1px dashed grey;
+    /* margin-bottom: 10px; */
+    width: 100%;
+}
+
+
+
 
 .singlePostInfo{
     margin-bottom: 20px;
@@ -55,12 +160,77 @@
 
 .singlePostDesc{
     color: #666;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Merriweather', serif;
+    line-height: 30px;
+    letter-spacing: 1px;
+
+}
+
+.singlePostDescInput{
+    color: #666;
     font-size: 18px;
     line-height: 25px;
+    width: 98%;
+    min-height: 80vh;
+    max-height: 100vh;
+    border: 2px dashed rgb(155, 155, 155);
+    outline: none;
+    padding: 10px;
+    border-radius: 2px;
+    white-space: pre-wrap;
+}
+
+.singlePostDescInput:focus{
+    border-color: black;
+    font-weight: 500;
 }
 
 .singlePostDesc::first-letter{
     /* margin-left: 20px; */
     font-size: 40px;
     font-weight: 600;
+}
+
+
+.editButtons{
+    /* background-color: #b39656; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.editButton{
+    padding: 10px 50px;
+    cursor: pointer;
+    margin: 0 20px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Varela Round', sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+.cancelButton{
+    background-color: tomato;
+    transition-duration: 0.2s;
+}
+
+.cancelButton:hover{
+    background-color: red;
+}
+
+.updateButton{
+    background-color: teal;
+    transition-duration: 0.2s;
+}
+
+.updateButton:hover{
+    background-color: rgb(0, 92, 92);
 }

@@ -9,7 +9,7 @@ const Posts = ({posts}) => {
 
         {posts.length ?
           <div className="posts">
-            {posts.map((p) => (
+            {posts.slice().reverse().map((p) => (
               <Post key={p._id} post={p} />
             ))}
           </div>

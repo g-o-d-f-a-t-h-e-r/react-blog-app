@@ -24,6 +24,7 @@
     color: #444;
     cursor: pointer;
     transition-duration: 0.2s;
+
 }
 
 .topIcon:hover{
@@ -36,6 +37,10 @@
     border-radius: 50%;
     object-fit: cover;
     transition-duration: 0.2s;
+    border: 1px solid lightcoral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .topImg:hover{
